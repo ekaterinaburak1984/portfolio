@@ -7,15 +7,14 @@
     color: rgba(255, 255, 255, 1);
 }
 body{
-    width: 100%;
-    /* height: 2900px; */
+    width: 100%;   
 }
 .header__logo{
     animation: flip 1s 2;
 }
 header{
     background-color: rgba(92, 204, 204, 1);
-    width: 100%;
+    width: 100vw;
     height: 3.45%;
     display: flex;
     justify-content: space-around;
@@ -42,6 +41,9 @@ header a{
     padding: 2%;
     box-shadow: 0px 4px 4px 0px rgba(16, 17, 17, 0.25); 
 }
+a:hover{
+    background-color: blue;    
+}
 nav>img{
     width: 20%;
 }
@@ -51,16 +53,21 @@ nav>img{
     
 }
 .card1{
-    width:400px;
-    height: 370px;
+    width:21vw;
+    height: 34vh;
     background-image: url(Group\ 35.png);
     position: absolute;
     top: 140px;
     left: 380px;
+    transition: 3s;
+}
+.card1:hover{
+    transform: rotate(45grad);
+    transition: 3s;
 }
 .card2{
-    width: 670px;
-    height: 670px;
+    width: 35vw;
+    height: 65vh;
     background: linear-gradient(0deg, rgba(213,88,200,1) 0%, rgba(36,210,146,1) 100%);
     border-radius: 50%;
     text-align: center;        
@@ -138,12 +145,22 @@ h1{
     background-color: rgba(102, 163, 210, 1);
     border-radius: 50px;
     padding-top: 50px;
+    transition: 2s;  
+}
+.card5:hover{
+    transform: scale(1.25);
+    transition: 2s;      
 }
 .grup1{
     width: 440px;
     height: 470px;
     background: linear-gradient(0deg, rgba(61,78,129,1) 0%, rgba(110,127,243,1) 100%);
-    border-radius: 50px;    
+    border-radius: 50px;
+    transition: 2s;  
+}
+.grup1:hover{
+    transform: scale(1.25);
+    transition: 2s;
 }
 .grup2{
     height: 320px;
@@ -154,6 +171,10 @@ h1{
 .portfolio{
     padding: 100px 260px 170px;
     width: calc(100% - 520px);
+}
+.work:hover{
+    transform: 1.25;
+    transition: 2s;
 }
 .button-portfolio{
     background: none;
@@ -183,4 +204,155 @@ footer{
 }
 .footer-icon img{
     width: 64px;
+}
+
+/* телефоны горизонтально */
+@media (max-width: 767px){  
+    .left{
+        width: 35%;    
+    }
+    .right{
+        width: 35%;
+    }
+    .white{
+        height: 700px;
+    }  
+    .card1{
+        width:42vw;
+        height: 68vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        left: 60px;        
+    }
+    .card2{
+        width: 70vw;
+        height: 130vh;
+        left: 180px;
+    }
+    .card3{
+        left: 58px;
+        width: 35vw;
+        height: 65vh;
+        top: 380px;
+        padding-top:2% ;
+        padding-right: 7%;
+    }
+    .comp{
+        width:20vw ;
+    }
+    .card4{
+        width: 35vw;
+        height: 65vh;
+        top: 420px;
+        left: 370px;
+    }
+    .hi{
+        font-size: 30px;
+        padding-top: 30px;
+    }
+    .my{
+        font-size: 30px;
+        padding-top: 10px;
+        padding-right: 20px;
+    }
+    .green{
+        width: calc(100% - 240px);    
+        padding: 100px 120px 170px;
+    }
+    .card5{
+        width: 60vw;
+        height: 70vh;       
+    }
+    .card5 img{
+        width: 220px;
+        padding-left: 100px;
+    }  
+    .servises{
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    margin-top: 50px;
+    }
+    .portfolio{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        padding: 50px;
+        width: calc(100% - 100px);
+    }
+    .card6{
+        width: 500px;        
+    }
+    .button-portfolio{
+        position: static;
+    }
+}
+/* телефоны вертикально */
+@media (max-width: 480px){
+    nav{
+        flex-direction: column;        
+        gap: 10px;
+    } 
+    header a{       
+        width: 100px;
+        padding: 0;
+        font-size: 16px;
+    }    
+    .white{
+        height: 100vh;
+    }  
+    .card1{
+        width:50vw;
+        height: 20vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        left: 10px;        
+    }
+    .card2{
+        width: 90vw;
+        height: 50vh;
+        left: 30px;
+    }
+    .card3{
+        left: 10px;
+        width: 39vw;
+        height: 25vh;
+       top: 330px;
+    }
+    .comp{
+        width:20vw ;
+    }
+    .card4{
+        width: 39vw;
+        height: 25vh;
+        top: 380px;
+        left: 200px;
+    }
+    .my{
+        font-size: 20px;
+        padding-left: 7%;
+    }
+    .grup1{
+        width: 80vw; 
+        height: 420px;      
+    }
+    .grup2{
+        height: 250px;
+    }   
+    .grup2 img{
+        width: 100px;
+    }
+    .card5{
+        width: 80vw;
+        height: 45vh;       
+    }
+    .card5 img{
+        width: 220px;
+        padding-left: 50px;
+    }
+    .card6{
+        width: 300px;
+    }
+    
 }
